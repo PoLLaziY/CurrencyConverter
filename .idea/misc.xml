@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/CurrencyConverter/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CurrencyConverter/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.134" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CurrencyConverter/app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.1945" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CurrencyConverter/app/src/main/res/drawable/ic_launcher_background.xml" value="0.134" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CurrencyConverter/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CurrencyConverter/app/src/main/res/layout/main_item.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CurrencyConverter/app/src/main/res/layout/main_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CurrencyConverter/app/src/main/res/layout/main_recycler_item.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CurrencyConverter/app/src/main/res/menu/material_bar_menu.xml" value="0.18645833333333334" />
       </map>
     </option>
   </component>

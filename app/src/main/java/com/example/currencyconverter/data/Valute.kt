@@ -1,3 +1,76 @@
 package com.example.currencyconverter.data
 
-data class Valute(val charCode: String, val name: String, var value: Double, var previous: Double)
+data class Valute(
+    val charCode: String,
+    val name: String,
+    val value: Double,
+    val previous: Double
+){
+    //значения на экране
+    var valueValue = value
+    var valuePrevious = previous
+    //активно ли окно
+    var isChecked = true
+
+    override fun toString(): String {
+        return "Valute(\"$charCode\",\"$name\",$value,$previous)"
+    }
+
+    //установить значения на экране
+    fun setValues(double: Double) {
+        //если окно активно
+        if (isChecked) {
+            //если введено число 0 - вывести курс валюты (количество рублей за 1 единицу)
+            if (double == 0.0) {
+                valueValue = value
+                valuePrevious = previous
+            }
+            //в ином случае вывести количество валюты, за такое количество рублей
+            else {
+                valueValue = double / value
+                valuePrevious = double / previous
+            }
+        }
+    }
+
+    companion object {
+        //Если не удалось загрузить список из интернета или из файла во внутренней директории
+        var defaultDate = "2022-03-16T11:30:00"
+        var defaultList = mutableListOf(
+            Valute("AUD", "Австралийский доллар", 78.3702, 80.3676),
+            Valute("AZN","Азербайджанский манат",63.7701,65.7092),
+            Valute("GBP","Фунт стерлингов Соединенного королевства",141.3646,145.7631),
+            Valute("AMD","Армянских драмов",22.071,22.4085),
+            Valute("BYN","Белорусский рубль",32.6353,33.5841),
+            Valute("BGN","Болгарский лев",60.7307,62.6587),
+            Valute("BRL","Бразильский реал",21.01,21.6618),
+            Valute("HUF","Венгерских форинтов",32.0003,33.0069),
+            Valute("HKD","Гонконгский доллар",13.8133,14.2438),
+            Valute("DKK","Датская крона",15.9578,16.4559),
+            Valute("USD","Доллар США",108.0521,111.4823),
+            Valute("EUR","Евро",118.7601,122.4522),
+            Valute("INR","Индийских рупий",14.168,14.5517),
+            Valute("KZT","Казахстанских тенге",21.2006,21.7075),
+            Valute("CAD","Канадский доллар",85.0335,86.9393),
+            Valute("KGS","Киргизских сомов",10.3915,10.8235),
+            Valute("CNY","Китайский юань",17.0155,17.4743),
+            Valute("MDL","Молдавских леев",58.5807,60.465),
+            Valute("NOK","Норвежская крона",12.1311,12.43),
+            Valute("PLN","Польский злотый",25.3411,25.866),
+            Valute("RON","Румынский лей",24.0046,24.7458),
+            Valute("XDR","СДР (специальные права заимствования)",149.0395,153.6237),
+            Valute("SGD","Сингапурский доллар",79.3742,81.678),
+            Valute("TJS","Таджикских сомони",89.1262,98.9107),
+            Valute("TRY","Турецких лир",73.4309,76.1075),
+            Valute("TMT","Новый туркменский манат",30.872,31.8521),
+            Valute("UZS","Узбекских сумов",98.5216,10.1649),
+            Valute("UAH","Украинских гривен",35.8082,36.945),
+            Valute("CZK","Чешских крон",48.098,49.2039),
+            Valute("SEK","Шведская крона",11.399,11.6305),
+            Valute("CHF","Швейцарский франк",114.9001,118.6108),
+            Valute("ZAR","Южноафриканских рэндов",71.7849,73.6503),
+            Valute("KRW","Вон Республики Корея",87.442,89.7025),
+            Valute("JPY","Японских иен",91.3567,94.4845)
+        )
+    }
+}
